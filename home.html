@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.0.0/dist/full.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      /* Use system fonts that look similar to your original choices */
+      /* Use system fonts */
       body {
         font-family: 'Courier New', Courier, monospace;
         font-weight: 500;
@@ -19,16 +19,19 @@
         letter-spacing: 1px;
       }
 
-      /* Simplified fade-in animation without @keyframes */
+      /* Transition-based fade-in effect */
       .fade-in {
         opacity: 0;
-        animation: fadeInAnimation 1.2s ease-out forwards;
+        transform: translateY(20px);
+        transition: 
+          opacity 1.2s ease-out,
+          transform 1.2s ease-out;
       }
 
-      /* Define animation directly in style tag */
-      @keyframes fadeInAnimation {
-        0% { opacity: 0; transform: translateY(20px); }
-        100% { opacity: 1; transform: translateY(0); }
+      /* Class to trigger the animation when added */
+      .fade-in.animate {
+        opacity: 1;
+        transform: translateY(0);
       }
     </style>
   </head>
@@ -56,10 +59,19 @@
       <p class="text-gray-300">Phone: +9172562023</p>
     </div>
 
-    <!-- Simple fade-in animation without JavaScript -->
+    <!-- JavaScript to trigger the animation -->
     <script>
-      // No JavaScript needed for basic functionality
-      // Animation is handled by CSS alone
+      document.addEventListener('DOMContentLoaded', function() {
+        // Get all elements with fade-in class
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        // Add animate class after a short delay to trigger the transition
+        setTimeout(() => {
+          fadeElements.forEach(element => {
+            element.classList.add('animate');
+          });
+        }, 100);
+      });
     </script>
   </body>
 </html>
