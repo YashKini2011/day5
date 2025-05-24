@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.0.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Anton&family=Boldonse&family=Tektur:wght@400..900&display=swap');
+
+      body {
+        font-family: 'Tektur', sans-serif;
+      }
+
+      h1 {
+        font-family: 'Anton', sans-serif;
+      }
+
+      .fade-in {
+        animation: fadeIn 1.2s ease-out;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white min-h-screen flex flex-col items-center py-10 px-4">
+
+    <!-- Header Section -->
+    <div class="text-center mb-10 fade-in">
+      <img src="yash.jpg" alt="Yash Kini" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-xl hover:scale-105 transition-transform duration-300" />
+      <h1 class="text-5xl font-bold text-rose-400">YASH KINI</h1>
+      <p class="text-gray-300 mt-2">123yash2071@sjcem.edu.in | +9172562923</p>
+    </div>
+
+    <!-- Cards Layout -->
+    <div class="flex flex-col items-center space-y-6 fade-in w-full max-w-sm">
+      <a href="https://yashkini2011.github.io/Day1/" class="w-full bg-rose-600 rounded-2xl shadow-md p-4 hover:bg-rose-500 hover:scale-105 transition-all duration-300 text-center text-white font-semibold text-xl">Day 1</a>
+      <a href="https://yashkini2011.github.io/" class="w-full bg-sky-600 rounded-2xl shadow-md p-4 hover:bg-sky-500 hover:scale-105 transition-all duration-300 text-center text-white font-semibold text-xl">Day 2</a>
+      <a href="https://yashkini2011.github.io/Day3/" class="w-full bg-emerald-600 rounded-2xl shadow-md p-4 hover:bg-emerald-500 hover:scale-105 transition-all duration-300 text-center text-white font-semibold text-xl">Day 3</a>
+      <a href="https://yashkini2011.github.io/Days4/" class="w-full bg-purple-600 rounded-2xl shadow-md p-4 hover:bg-purple-500 hover:scale-105 transition-all duration-300 text-center text-white font-semibold text-xl">Day 4</a>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="mt-16 text-center fade-in">
+      <h2 class="text-2xl font-bold mb-2 text-rose-400">Contact Me</h2>
+      <p class="text-gray-300">Email: 123yash2071@sjcem.edu.in</p>
+      <p class="text-gray-300">Phone: +9172562023</p>
+    </div>
+
+  </body>
+</html>
