@@ -56,16 +56,17 @@
       <p class="text-gray-300">Phone: +9172562023</p>
     </div>
 
-    <!-- JavaScript to trigger the animation -->
+    <!-- JavaScript to trigger the animation (ES5-compatible, no const/arrow) -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        const fadeElements = document.querySelectorAll('.fade-in');
-        setTimeout(() => {
-          fadeElements.forEach(element => {
-            element.classList.add('animate');
-          });
+        var fadeElements = document.querySelectorAll('.fade-in');
+        setTimeout(function() {
+          for (var i = 0; i < fadeElements.length; i++) {
+            fadeElements[i].classList.add('animate');
+          }
         }, 100);
       });
     </script>
+
   </body>
 </html>
